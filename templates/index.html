@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Summarization</title>
+</head>
+
+<body>
+    <h1>Document Summarization</h1>
+    <form id="summarizeForm">
+        <label for="inputText">Enter Text:</label><br>
+        <textarea id="inputText" name="inputText" rows="4" cols="50"></textarea><br><br>
+        <input type="button" value="Summarize" onclick="summarize()">
+    </form>
+    <h2>Summarization Result:</h2>
+    <div id="result"></div>
+
+    <script>
+        function summarize() {
+            var inputText = document.getElementById("inputText").value;
+
+            // Send the inputText to the API using fetch or XMLHttpRequest
+            // Update the 'result' div with the API response
+            fetch('/summarize', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ documents: [{ id: 1, text: inputText }] })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("result").innerHTML = '<p>' + data.results[0].summary + '</p>';
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+
+</html>

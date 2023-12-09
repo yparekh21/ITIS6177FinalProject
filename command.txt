@@ -1,0 +1,14 @@
+curl -i -X POST https://finalprojectyash.cognitiveservices.azure.com/language/analyze-text/jobs?api-version=2022-10-01-preview \
+-H "Content-Type: application/json" \
+-H "Ocp-Apim-Subscription-Key: dc18f5e27339479db330dcfd68312d07" \
+--data @docRequest.json
+
+curl -i -X POST https://finalprojectyash.cognitiveservices.azure.com/language/analyze-conversations/jobs?api-version=2023-11-15-preview \
+-H "Content-Type: application/json" \
+-H "Ocp-Apim-Subscription-Key: dc18f5e27339479db330dcfd68312d07" \
+-d \
+
+
+curl -X GET https://finalprojectyash.cognitiveservices.azure.com/language/analyze-text/jobs/d2b2c084-12b6-4959-8e67-92e103a18133?api-version=2022-10-01-preview \
+-H "Content-Type: application/json" \
+-H "Ocp-Apim-Subscription-Key: dc18f5e27339479db330dcfd68312d07"
