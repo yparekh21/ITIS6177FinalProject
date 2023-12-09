@@ -14,6 +14,15 @@ The Document Summarization API provides a simple interface to summarize text doc
 **3. Web Browser**:
 - To interact with the app's user interface, users need a web browser. The app is designed to be accessible via standard web browsers.
 
+## Azure API Key and Endpoint
+**1. Azure AI Language Portal**:
+- Users can obtain the API key and endpoint by creating an account on the Azure AI Language Portal (https://azure.microsoft.com/en-us/products/ai-services/ai-language/).
+- Once logged in, they can create a "Language service" resource and retrieve the API key and endpoint from the resource's configuration.
+
+**2. Azure Cognitive Services Subscription**:
+- The Document Summarization App requires a subscription to Azure Cognitive Services, specifically the Text Analytics service.
+- Users can subscribe to Text Analytics through the Azure Portal and obtain the necessary credentials.
+
 ## Base URL
 The base URL for the API is https://your-api-domain.com.
 
