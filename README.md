@@ -13,8 +13,42 @@ The base URL for the API is https://your-api-domain.com.
 The API requires an API key for authentication. Include the API key in the headers of your requests using the Ocp-Apim-Subscription-Key header.
 
 ## Endpoints
-Summarize Text
+**1. GET /**:
+- **Description**: This endpoint serves the main interface of the Document Summarization App. Users can access this endpoint through a web browser to input text and initiate the summarization process. This endpoint is the entry point for users interacting with the app. They can visit the root URL to access the app's user interface and easily input the text they want to be summarized.
+- **Request**:
+  - Method: GET
+- **Response**: The HTML content for the app homepage, including a text area for user input and a button to trigger text summarization.
 
+**2. POST /summarize**:
+- **Description**: This endpoint is responsible for handling the summarization process. It expects a JSON payload containing the text to be summarized.
+- **Request**:
+  - Method: POST
+  - Headers:
+    - Content-Type: application/json
+  - Body:
+```
+{
+    "documents": [
+        {
+            "id": "1",
+            "language": "en",
+            "text": "Your input text goes here."
+        }
+    ]
+}
+```
+- **Response**: A JSON response containing the summarization result.
+```
+{
+    "results": [
+        {
+            "id": "1",
+            "language": "en",
+            "summary": "The summarized text goes here."
+        }
+    ]
+}
+```
 ## Error Handling
 The API returns appropriate HTTP status codes and error messages. If an error occurs, refer to the error field in the response for details.
 
