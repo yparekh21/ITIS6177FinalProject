@@ -2,6 +2,7 @@
 
 ## Overview
 The Document Summarization API provides a simple interface to summarize text documents using Azure Text Analytics. The API supports extracting key sentences from input text. The Document Summarization App uses the Azure Text Analytics service for text summarization. Users authenticate themselves by providing the API key and the service endpoint. The API key is included in the request headers for each API call made by the app to the Text Analytics service. Users should securely store their API key and avoid sharing it publicly.
+![](demo.gif)
 
 ## Prerequisites
 **1. API Key**:
