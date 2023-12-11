@@ -94,6 +94,24 @@ The API requires an API key for authentication. Include the API key in the heade
     ]
 }
 ```
+## Postman
+To test this application via Postman, a user must first have Postman installed. Next, a user can test the POST and GET requests of the REST API. To test the POST data, a user must go to the "Body" tab and utilize the following format to summarize their text.
+```
+{
+    "documents": [
+        {
+            "id": "1",
+            "language": "en",
+            "text": "Your input text goes here."
+        }
+    ]
+}
+```
+![image](https://github.com/yparekh21/ITIS6177FinalProject/assets/58528092/92953aec-e2c2-4e01-941a-f9af953d70fa)
+
+To test the GET data, a user can utilize the link of their asset to receive the status code 200 to reflect that the application is working.
+![image](https://github.com/yparekh21/ITIS6177FinalProject/assets/58528092/0d42c954-478f-4721-ad5e-d0c1ce9a513b)
+
 ## Error Handling
 The API returns appropriate HTTP status codes and error messages. If an error happens, please take a look at the error field in the response for details.
 #### Format
