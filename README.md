@@ -52,7 +52,7 @@ pip install azure-ai-textanalytics==5.3.0
 - Users can subscribe to Text Analytics through the Azure Portal and obtain the necessary credentials.
 
 ## Base URL
-The base URL for the API is https://your-api-domain.com.
+The base URL for the API is http://165.227.212.57:5000/.
 
 ## Authentication
 The API requires an API key for authentication. Include the API key in the headers of your requests using the Ocp-Apim-Subscription-Key header.
