@@ -10,10 +10,37 @@ The Document Summarization API provides a simple interface to summarize text doc
 - The API key should be kept secure, as it serves as a unique identifier and is required for making requests to the underlying API.
 
 **2. Text Analytics Service Endpoint**:
-- Users should have access to the endpoint URL of the Azure Text Analytics service. This is the URL where the service is hosted and can be reached.
+Users should have access to the endpoint URL of the Azure Text Analytics service. This is the URL where the service is hosted and can be reached.
 
 **3. Web Browser**:
-- To interact with the app's user interface, users need a web browser. The app is designed to be accessible via standard web browsers.
+To interact with the app's user interface, users need a web browser. The app is designed to be accessible via standard web browsers.
+
+**4. Create Environment Variables**:
+Your application must be authenticated to send API requests. For production, use a secure way of storing and accessing your credentials. In this example, you will write your credentials to environment variables on the local machine running the application.
+1. To set the LANGUAGE_KEY environment variable, replace your-key with one of the keys for your resource.
+2. To set the LANGUAGE_ENDPOINT environment variable, replace your-endpoint with the endpoint for your resource.
+
+#### Windows
+```
+setx LANGUAGE_KEY your-key
+```
+```
+setx LANGUAGE_ENDPOINT your-endpoint
+```
+
+#### MacOS
+```
+export LANGUAGE_KEY=your-key
+```
+```
+export LANGUAGE_ENDPOINT=your-endpoint
+```
+
+**5. Install the client library**:
+After installing Python, you can install the client library with:
+```
+pip install azure-ai-textanalytics==5.3.0
+```
 
 ## Azure API Key and Endpoint
 **1. Azure AI Language Portal**:
